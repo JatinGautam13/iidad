@@ -1,28 +1,32 @@
 .section4 {
   /* background: #111; Add back for best visibility */
-  width: 100vw;
-  padding: 85px 0 0 0;
+  width: 100%;
+  max-width: 100vw;
+  padding: 80px 24px 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .heading {
   color: #fff;
-  font-size: 3rem;
+  font-size: clamp(1.9rem, 4vw, 3rem);
   font-family: serif;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 150px;
-  line-height: 1.18;
+  margin-bottom: clamp(48px, 10vw, 150px);
+  line-height: 1.2;
+  padding: 0 16px;
 }
 
 .cardsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 38px 34px;
-  width: 80vw;
-  max-width: 1550px;
+  gap: 48px 32px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
   justify-items: center;
   align-items: flex-start;
 }
@@ -32,8 +36,9 @@
   flex-direction: column;
   align-items: center;
   background: none;
-  width: 590px;
-  max-width: 95vw;
+  width: 100%;
+  max-width: 520px;
+  padding: 0 8px;
 }
 
 .cardImgBox {
@@ -63,69 +68,89 @@
   align-items: center;
   margin-top: 15px;
   width: 100%;
-  gap: 30px; /* Control gap between label and source */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .cardLabel {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   font-family: serif;
   font-weight: 400;
   text-align: left;
-  line-height: 1.22;
+  line-height: 1.28;
   letter-spacing: -0.01em;
-  /* flex: 1; */
 }
 
 .cardSource {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
   color: #bbb;
   font-family: serif;
   text-align: right;
   letter-spacing: 0.06em;
   margin-top: 0;
-  /* flex: 1; */
 }
 
-/* Desktop shrink for extra large screens */
-@media (max-width: 1400px) {
-  .cardItem { width: 47vw; }
-}
-
-/* Tablet */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .cardsGrid {
-    gap: 20px 0px;
-    width: 98vw;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100vw;
+    gap: 40px 24px;
+    max-width: 1000px;
   }
-  .cardItem { width: 92vw; }
-  .heading { font-size: 1.65rem; margin-bottom: 28px; }
-  .cardLabel { font-size: 1rem; }
-  .cardSource { font-size: 0.88rem; }
-  .cardLabelSourceRow { gap: 18px; }
 }
 
-/* Mobile */
+@media (max-width: 872px) {
+  .section4 {
+    padding: 60px 18px 0 18px;
+  }
+  .heading {
+    margin-bottom: 60px;
+  }
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    width: 100%;
+    gap: 32px;
+  }
+  .cardItem {
+    max-width: 100%;
+  }
+  .cardLabel {
+    font-size: 1.15rem;
+  }
+  .cardSource {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 600px) {
-  .cardsGrid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    width: 100vw;
-    max-width: 100vw;
+  .section4 {
+    padding: 50px 16px 0 16px;
   }
-  .cardItem { width: 100vw; }
-  .cardImgBox { border-radius: 12px; }
-  .cardImg { border-radius: 12px; }
-  .heading { font-size: 1.05rem; margin-bottom: 18px; }
-  .cardLabel { font-size: 0.74rem; margin-top: 10px; }
-  .cardSource { font-size: 0.65rem; margin-top: 4px; }
-  .cardLabelSourceRow { gap: 8px; }
+  .heading {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+    line-height: 1.35;
+  }
+  .cardLabelSourceRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .cardLabel {
+    font-size: 1.1rem;
+  }
+  .cardSource {
+    font-size: 0.9rem;
+  }
 }
 
-/* Optional: For extremely narrow screens */
 @media (max-width: 400px) {
-  .cardLabel, .cardSource { font-size: 0.6rem; }
-  .cardLabelSourceRow { gap: 4px; }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .cardLabel {
+    font-size: 1rem;
+  }
+  .cardSource {
+    font-size: 0.85rem;
+  }
 }

@@ -1,7 +1,6 @@
 .page5 {
-  height: 70vh;
   position: relative;
-  width: 100vw;
+  width: 100%;
   /* background: #181818; */
   overflow-x: hidden;
   overflow-y: hidden;
@@ -15,7 +14,6 @@
 .elem, .elem2 {
   white-space: nowrap;
   overflow-x: hidden;
-  margin-bottom: -2vw;
 }
 
 .elem h1, .elem2 h1 {
@@ -58,7 +56,6 @@
 /* Responsive styles */
 @media (max-width: 900px) {
   .page5 {
-    height: 60vw;
   }
   .elem h1, .elem2 h1 {
     font-size: 3.7rem;
@@ -67,18 +64,28 @@
 
 @media (max-width: 500px) {
   .page5 {
-    height: 48vw;
-    min-height: 260px;
-    padding: 10px 3vw;
-    justify-content: flex-start;
+    height: auto;
+    min-height: 280px;
+    padding: 40px 16px;
+    justify-content: center;
+  }
+  .elem, .elem2 {
+    margin-bottom: -1vw;
   }
   .elem h1, .elem2 h1 {
-    font-size: 2.7rem;
-    -webkit-text-stroke: 0.5px #fff;
-    margin-bottom: 4px;
+    font-size: 2.2rem;
+    -webkit-text-stroke: 0.8px #fff;
+    margin-bottom: 8px;
   }
   .elem span, .elem2 span {
-    border-bottom-width: 1px;
-    -webkit-text-stroke: 0.8px #fff;
+    border-bottom-width: 1.5px;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
+@media (max-width: 400px) {
+  .elem h1, .elem2 h1 {
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0.7px #fff;
   }
 }

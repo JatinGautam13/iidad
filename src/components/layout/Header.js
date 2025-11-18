@@ -18,21 +18,56 @@ export default function Header() {
 
   useEffect(() => {
     const menus = document.querySelectorAll(".delay-dropdown");
+    const handlers = [];
+
     menus.forEach((menu) => {
       let hideTimer;
-      menu.addEventListener("mouseenter", () => {
+      const handleMouseEnter = () => {
         clearTimeout(hideTimer);
         menu.classList.add("open-now");
-      });
-      menu.addEventListener("mouseleave", () => {
+      };
+      const handleMouseLeave = () => {
         hideTimer = setTimeout(() => {
           menu.classList.remove("open-now");
-        }, 200); // 2 sec delay
-      });
+        }, 200);
+      };
+
+      menu.addEventListener("mouseenter", handleMouseEnter);
+      menu.addEventListener("mouseleave", handleMouseLeave);
+
+      handlers.push({ menu, handleMouseEnter, handleMouseLeave });
     });
+
+    // Cleanup on unmount
+    return () => {
+      handlers.forEach(({ menu, handleMouseEnter, handleMouseLeave }) => {
+        menu.removeEventListener("mouseenter", handleMouseEnter);
+        menu.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    };
   }, []);
 
   const [openMegaMenu, setOpenMegaMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Track viewport changes
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 752);
+    };
+    
+    checkMobile(); // Initial check
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Close mega menu when switching from mobile to desktop
+  useEffect(() => {
+    if (!isMobile) {
+      setOpenMegaMenu(false);
+    }
+  }, [isMobile]);
 
   const handleMegaMenuToggle = () => {
     setOpenMegaMenu((prev) => !prev);

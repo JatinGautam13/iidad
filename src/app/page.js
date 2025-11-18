@@ -8,10 +8,10 @@ import Homesection5 from "@/components/HomeSection/HomeSection5";
 export default function Home() {
   return (
     <main>
-      <HomeSection1 />
-      <HomeSection2 />
-      <HomeSection3 />
-      <HomeSection4 />
+   <HomeSection1 />
+    <HomeSection2 />
+       <HomeSection3 />
+     <HomeSection4 />
       <Homesection5 />
     </main>
   );

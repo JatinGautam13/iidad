@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <div data-scroll-container>
           {children}
         </div>
-        <Footer />
+       <Footer />
       </body>
     </html>
   );

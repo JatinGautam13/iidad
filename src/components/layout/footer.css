@@ -142,7 +142,12 @@
   letter-spacing: 0.2px;
    cursor: default;
 }
-
+@media(max-width:1061px){
+  .footer-bg{
+    padding: 20px;
+    margin: 20px;
+  }
+}
 /* Responsive: adjust for smaller screens */
 @media (max-width: 600px) {
   .footer-bg {

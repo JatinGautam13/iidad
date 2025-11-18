@@ -16,14 +16,16 @@ export default function HomeSection1() {
 
   return (
     <section className={styles.heroBg}>
+      <h2 className={styles.Logo}>iidad.com</h2>
+        
       <div className={styles.heroRow} ref={heroRowRef}>
+        
         <div className={styles.heroContent}>
           <span className={styles.webOffer}>
             Our web offer: Catch me online!
           </span>
           <h1 className={styles.heroTitle}>
-            For a digital experience that will<br />
-            leave a lasting impression.
+            For a digital experience that will leave a lasting impression.
           </h1>
           <p className={styles.heroDesc}>
             We design turnkey websites and web apps that convert and reinforce brand messaging.

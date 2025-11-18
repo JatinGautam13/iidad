@@ -20,12 +20,10 @@ export default function HomeSection2() {
       {/* Left Text */}
       <div className={styles.leftCol} >
         <h2 className={styles.bigTitle}>
-          Creativity in the<br />service of performance
+          Creativity in the service of performance
         </h2>
         <p className={styles.descText}>
-          From architecture to design, including content strategy,<br />
-          integration and development (in the case of a web app),<br />
-          we will guide you through each stage of the design process.
+          From architecture to design, including content strategy, integration and development (in the case of a web app), we will guide you through each stage of the design process.
         </p>
       </div>
       {/* Right Video */}

@@ -21,10 +21,9 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-left">
             <div className="footer-logo-text">
-              <img src="/logo.png" alt="Logo" className="footer-logo" />
               <div>
                 <div className="footer-brand">
-                  Thirteen Grams <span className="footer-arrow">↗</span>
+                  iidad<span className="footer-arrow">↗</span>
                 </div>
                 <div className="footer-subtext">
                   Creative minds<br />for creative brands
