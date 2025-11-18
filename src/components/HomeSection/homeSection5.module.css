@@ -1,0 +1,124 @@
+.wrapper {
+  /* background: #111; */
+  width: 100vw;
+  padding: 74px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  color: #fff;
+  font-size: 3.8rem;
+  font-family: serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 74px;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+}
+.webflow {
+  color: #7a7afb;
+  font-family: serif;
+  font-size: 1.07em;
+  font-weight: 400;
+  letter-spacing: 0.045em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 60px 0;
+  width: 100vw;
+  max-width: 1550px;
+  justify-items: center;
+  align-items: flex-start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 410px;
+  max-width: 94vw;
+  background: none;
+  cursor: default;
+}
+
+.pillArrowWrapper {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: filter 0.18s;
+  transform: rotate(-53deg);
+  filter: drop-shadow(0px 0px 14px #6278ed);
+}
+
+/* Optional: for mobile, reduce size/rotation */
+@media (max-width: 700px) {
+  .pillArrowWrapper {
+    transform: rotate(-53deg) scale(0.75);
+  }
+}
+
+.pillArrow {
+  display: block;
+  user-select: none;
+}
+
+.circleGroup {
+  transition: transform 0.3s cubic-bezier(.76,.27,.32,.87);
+  /* filter: drop-shadow(0px 0px 14px #6278ed); */
+}
+
+/* Animate black circle + arrow up on hover */
+.pillArrowWrapper:hover .circleGroup {
+  transform: translatex(38px);
+}
+
+.circleGlow {
+  
+  transition: filter 0.28s;
+}
+
+/* Rotate arrow so it points pill direction */
+.arrowPath {
+  transition: transform 0.3s cubic-bezier(.76,.27,.32,.87);
+  transform: rotate(90deg);
+  transform-origin: 42px 34px;
+}
+
+.cardTitle {
+  color: #fff;
+  font-family: serif;
+  font-size: 2.32rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.cardDesc {
+  color: #ccc;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.22rem;
+  text-align: center;
+  margin-bottom: 8px;
+  max-width: 93%;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .heading { font-size: 2.2rem; margin-bottom: 36px; }
+  .grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); gap: 37px 0; }
+  .card { width: 90vw; }
+  .cardTitle { font-size: 1.18rem; }
+  .cardDesc { font-size: 1.05rem;}
+}
+
+@media (max-width: 700px) {
+  .heading { font-size: 1.18rem; margin-bottom: 18px; }
+  .grid { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); gap: 16px 0; }
+  .card { max-width: 99vw; width: 99vw;}
+  .cardTitle { font-size: 1rem; }
+  .cardDesc { font-size: 0.84rem;}
+}
