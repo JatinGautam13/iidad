@@ -25,7 +25,7 @@ export default function HomeSection1() {
             Our web offer: Catch me online!
           </span>
           <h1 className={styles.heroTitle}>
-            For a digital experience that will leave a lasting impression.
+            For a digital experience that will <br/>leave a lasting impression.
           </h1>
           <p className={styles.heroDesc}>
             We design turnkey websites and web apps that convert and reinforce brand messaging.

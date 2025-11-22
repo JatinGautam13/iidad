@@ -2,22 +2,22 @@ import styles from "./homeSection4.module.css";
 
 const cardData = [
   {
-    video: "/video1.mp4",
+    video: "/image-vid/flying secoya_1 (1).mp4",
     label: "Stratégie de contenu & Copywriting",
     source: "from Secoya",
   },
   {
-    video: "/video2.mp4",
+    video: "/image-vid/Weem_1.mp4",
     label: "Ergonomie (UX)",
     source: "from Weem",
   },
   {
-    video: "/video1.mp4",
+    video: "/image-vid/Lemlist_1.mp4",
     label: "Stratégie de contenu & Copywriting",
     source: "from Secoya",
   },
   {
-    video: "/video2.mp4",
+    video: "/image-vid/LGM_1.mp4",
     label: "Ergonomie (UX)",
     source: "from Weem",
   },

@@ -25,7 +25,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 48px 32px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   justify-content: center;
   justify-items: center;
   align-items: flex-start;
@@ -37,7 +37,7 @@
   align-items: center;
   background: none;
   width: 100%;
-  max-width: 520px;
+  max-width: 620px;
   padding: 0 8px;
 }
 
@@ -59,7 +59,7 @@
   object-fit: cover;
   border-radius: 8px;
   background: #222;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .cardLabelSourceRow {
@@ -95,6 +95,9 @@
   .cardsGrid {
     gap: 40px 24px;
     max-width: 1000px;
+  }
+  .cardItem {
+    max-width: 520px;
   }
 }
 
